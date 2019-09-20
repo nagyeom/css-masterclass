@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS-GRID</title>
+        <style>
+            .father{
+                display: grid;
+                grid-template-columns: 50px 25px; /*가로 방향으로 -----(50px) -----(25px)*/
+                grid-template-rows: 100px 30px;/*세로 방향으로 |
+                                                                                                            (100px)
+                                                                                                            |
+                                                                                                            (30px)*/
+                grid-gap : 5px;/*grid사이 간격*/
+            }
+            .box{
+                background-color: #9b59b6;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  .father>.box*5 -->
+        <div class="father">
+           <div class="box"></div>
+           <div class="box"></div>
+           <div class="box"></div>
+           <div class="box"></div>
+           <div class="box"></div>
+       </div>
+    </body>
+</html>
