@@ -5,11 +5,14 @@
         <style>
             /* display:flex; =>해당 클래스의 바로 밑에 자식 개체에 영향을 미친다. 
             justify-content:flex-start;/flex-end;/flex-between;/space-around; 
-                => 자식 개체들의 정렬 :왼쪽 구석 정렬/오른쪽 구석정렬/가운데 개체를 간격을 맞춰 띄워놓음/처음부터 간격을 주고 띄워놓음
+                => 자식 개체들의 정렬(메인 축) :처음정렬/끝정렬/가운데 개체를 간격을 맞춰 띄워놓음/처음부터 간격을 주고 띄워놓음
             */
             .father  {
                 display: flex;
-                justify-content: flex-end;
+                flex-direction: column; /* main axis direction */
+                justify-content: flex-start; /* main axis 방향에 따라(flex-direction 방향) 자식 개체 정렬에 영향을 준다.*/
+                align-items: flex-start; /* main axis의 수직축(cross axis) 정렬*/
+                height: 100vh; /* vh(viewport height): 화면 높이*/
             }
             .box{
                 width:300px;
