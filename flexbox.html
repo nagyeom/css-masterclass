@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flex box</title>
+        <style>
+            /* display:flex; =>해당 클래스의 바로 밑에 자식 개체에 영향을 미친다. 
+            justify-content:flex-start;/flex-end;/flex-between;/space-around; 
+                => 자식 개체들의 정렬 :왼쪽 구석 정렬/오른쪽 구석정렬/가운데 개체를 간격을 맞춰 띄워놓음/처음부터 간격을 주고 띄워놓음
+            */
+            .father  {
+                display: flex;
+                justify-content: flex-end;
+            }
+            .box{
+                width:300px;
+                height:300px;
+                background-color:palevioletred;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="father">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>
