@@ -14,6 +14,16 @@
   },
   "homepage": "https://github.com/nagyeom/css-masterclass#readme",
   "scripts": {
-    "start":"parcel index.html"
+    "start": "parcel index.html"
+  },
+  "dependencies": {
+    "postcss-preset-env": "^6.7.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 0
+      }
+    }
   }
 }

@@ -1,3 +1,28 @@
-body {
-    background-color: red;
+/* 
+matches() :  인자 값을 가지고 html개체 속성을 검사해서 일치하면 css 수행
+li:matches(:nth-child(even), .target){
+    background-color: blue;
+} */
+
+/*not(): 인자 값을 가지고 html 개체 속성을 검사해 일치하면 그 개체만 빼고 css 수행*/
+/* li:not(.target){
+    background-color: blue;
+} */
+
+/* css variable 
+:root => document보다 상위 element
+--변수이름 : 값 => root아래 모든 개체에서 --변수이름으로 값 접근 가능 */
+:root{
+    --awesomeColor : #f39c12;
+    --liBordr : 1px solid red;
+}
+li:first-child a {
+    color:var(--awesomeColor);
+    border:var(--liBordr);
+}
+
+@custom-selector : --headers h1, h2, h3, h4, h5, h6;
+
+:--headers{
+    color : #2980b9;
 }
