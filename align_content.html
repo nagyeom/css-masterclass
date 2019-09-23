@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS-GRID</title>
+        <style>
+            .father{
+                display: grid;
+                grid-gap : 5px;/*grid사이 간격*/
+                grid-auto-rows : 100px;
+                grid-template-columns: repeat(5,100px);
+                justify-content: end; /*column 이동 start,center,end*/
+                align-content: end; /*화면높이값 필요, row 이동(세로) start,center, end*/
+                height: 100vh; /*화면 높이값*/
+                /* place-content: center end; 첫번째 인자 : justify-content / 두번째 인자 : align-content / 값이 하나면 둘다 같은값 */
+
+                justify-items: start; /* 개체 안의 item들의  column정렬 start, center, end*/
+                align-items: center; /* 개체 안의 item들의 row 정렬 start, center, end*/
+                /*place-items : center, end; 첫번째 인자 : justify-items / 두번째 인자 : align-items / 값이 하나면 둘다 같은 값*/
+            }
+            .box:nth-child(even){
+                background-color: #9b59b6;
+            }
+            .box:nth-child(odd){
+                background-color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  .father>.box*5 -->
+        <div class="father">
+           <div class="box">1</div>
+           <div class="box">2</div>
+           <div class="box">3</div>
+           <div class="box">4</div>
+           <div class="box">5</div>
+       </div>
+    </body>
+</html>
