@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS-GRID</title>
+        <style>
+            .father{
+                display: grid;
+                grid-auto-rows: 100px; /*세로길이 지정*/
+                grid-gap:5px;
+                /* grid-template-columns: 1fr 2fr 3fr 1fr; fr(fraction) 화면에 차지 할 수 있는최대한의 크기만큼 출력되게  해줌 */
+                /* grid-template-columns: repeat(3,1fr) 2fr; repeat(개체 개수, fr크기) 개체개수를 지정한 fr 크기만큼 반복 출력 */
+                /* grid-template-columns:minmax(300px,2fr) repeat(3,1fr); minmax(최소크기, 최대크기); */
+                /* grid-template-columns: min-content repeat(3,1fr); min-content : 1개영역에 그 영역의 개체 내용을 최소한의 가로 길이로 해서 집어넣는다. */
+                                                            /*max-content : 개체 내용 줄바꿈 없이 화면 최대 가로 길이로 출력*/
+                grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+                /*auto-fit : 화면에 가득 채우는거 auto-fill : 설정해둔 개체 외의 공간에는 ghost element로 꽉 채우는거*/
+            }
+            .first{
+                background-color: blueviolet;
+            }
+            .second{
+                background-color: aqua;
+            }
+            .third{
+                background-color: darkorange;
+            }
+            .fourth{
+                background-color: mediumvioletred;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  .father>.box*5 -->
+        <div class="father">
+           <div class="first">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptates vero officiis est unde tenetur non quae. Debitis sequi consectetur vitae iste porro, assumenda expedita quasi, ut laboriosam maiores distinctio.</div>
+           <div class="second"></div>
+           <div class="third"></div>
+           <div class="fourth"></div>
+       </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS-GRID</title>
+        <style>
+            .father{
+                display: grid;
+                grid-auto-rows: 200px; /*세로길이 지정*/
+                grid-gap:5px;
+                grid-template-areas: "header header header" "content content sidebar" "content content sidebar" "footer footer footer";
+                /*table로 치자면 header 3칸(1줄 200px) content 2칸 sidebar 1칸(2줄 200px) content2칸 sidebar 1칸(3줄 200px) footer 3칸(4줄 200px)*/
+            }
+            .first{
+                background-color: blueviolet;
+                grid-area: header; /*""로 감싸주지 않고 grid-template-area에 지정해놓은 item값을 쓴다.*/
+            }
+            .second{
+                background-color: aqua;
+                grid-area: sidebar;
+            }
+            .third{
+                background-color: darkorange;
+                grid-area: footer;
+            }
+            .fourth{
+                background-color: mediumvioletred;
+                grid-area: content;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  .father>.box*5 -->
+        <div class="father">
+           <div class="first"></div>
+           <div class="second"></div>
+           <div class="third"></div>
+           <div class="fourth"></div>
+       </div>
+    </body>
+</html>
