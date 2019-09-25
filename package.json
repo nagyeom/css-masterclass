@@ -17,13 +17,19 @@
     "start": "parcel index.html"
   },
   "dependencies": {
+    "postcss-grid-kiss": "^2.2.0",
     "postcss-preset-env": "^6.7.0"
+  },
+  "devDependencies": {
+    "postcss-color-mod-function": "^3.0.3"
   },
   "postcss": {
     "plugins": {
       "postcss-preset-env": {
         "stage": 0
-      }
-    }
+      },
+      "postcss-color-mod-function": {}
+    },
+    "postcss-grid-kiss":true
   }
 }

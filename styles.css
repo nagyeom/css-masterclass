@@ -12,17 +12,71 @@ li:matches(:nth-child(even), .target){
 /* css variable 
 :root => document보다 상위 element
 --변수이름 : 값 => root아래 모든 개체에서 --변수이름으로 값 접근 가능 */
-:root{
+/* :root{
     --awesomeColor : #f39c12;
     --liBordr : 1px solid red;
 }
 li:first-child a {
     color:var(--awesomeColor);
     border:var(--liBordr);
-}
+} */
 
-@custom-selector : --headers h1, h2, h3, h4, h5, h6;
+/* : 뒤에 띄어쓰기 하면안됨 */
+/* @custom-selector  :--headers h1, h2, h3, h4, h5, h6; 
 
 :--headers{
     color : #2980b9;
+} */
+
+/*custom media query range*/
+/* @custom-media --ipad-size (550px <= width < 850px ); 
+
+@media(--ipad-size){
+    body{
+        background-color: red;
+    }
+} */
+
+h1 {
+    color:#ff7675;
+}
+
+h1:hover{
+    color: color-mod(#ff7675 lightness(50%));
+}
+/* 더이상 color-mod()를 기본 지원하지 않기때문에  
+1. npm i postcss-color-mod-function -D 실행
+2. package.json ->plugins 추가하기 
+..."devDependencies": {
+    "postcss-color-mod-function": "^3.0.3"
+  },
+  "postcss": {
+    "plugins": {
+     ...
+      "postcss-color-mod-function":{
+        
+      }...
+    }
+}*/
+h2 {
+    font-family: system-ui;
+}
+
+/*double sort nesting rules*/
+main {
+    background-color: blue;
+    & section {
+        background-color: red;
+        width: 500px;
+        & li {
+            background-color: yellow;
+            width: 400px;
+            & a{
+                color: black;
+                &:hover{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
 }
